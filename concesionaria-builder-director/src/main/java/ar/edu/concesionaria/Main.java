@@ -134,6 +134,17 @@ public class Main {
                     .construir();
             concesionaria.agregarAuto(autoUsadoNuevo);
         });
+
+        probarCasoConError("Año mayor a 2000 para auto usado", () -> {
+            Auto autoUsadoAnioReciente = builderUsado
+                    .marca("Nissan")
+                    .modelo("RZ34")
+                    .patente("AK344MI")
+                    .anioFabricacion(2022)
+                    .kilometraje(150)
+                    .construir();
+            concesionaria.agregarAuto(autoUsadoAnioReciente);
+        });
     }
 
     private static void probarCasoConError(String descripcion, Runnable caso) {

@@ -128,7 +128,7 @@ public class AutoBuilderUsado implements BuilderAuto {
     private void validarAnioFabricacion() {
         int anioActual = Year.now().getValue();
         if (auto.getAnioFabricacion() > 2000 || auto.getAnioFabricacion() > anioActual) {
-            throw new IllegalArgumentException("El año de fabricación debe ser menor a 2000 ni puede ser mayor a" + anioActual);
+            throw new IllegalArgumentException("El año de fabricación debe ser menor a 2000 ni puede ser mayor a " + anioActual);
         }
     }
 
