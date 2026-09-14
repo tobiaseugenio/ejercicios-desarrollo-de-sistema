@@ -4,6 +4,11 @@ public class Combo extends Producto {
     private String nombre;
     private HashSet<Producto> productos;
     
+
+    public Combo(String nombre, HashSet<Producto> productos) {
+        this.nombre = nombre;
+        this.productos = new HashSet<>();
+    }
     public float calcularPrecioFinal() {
         float precioFinal = 0;
         for (Producto producto : productos) {
@@ -17,5 +22,18 @@ public class Combo extends Producto {
             stockDisponible += producto.calcularStockDisponible();
         }
         return stockDisponible;    
+    }
+     
+    public String getNombre() {
+        return nombre;
+    }
+    public void setNombre(String nombre) {
+        this.nombre = nombre;
+    }
+    public HashSet<Producto> getProductos() {
+        return productos;
+    }
+    public void setProductos(HashSet<Producto> productos) {
+        this.productos = productos;
     }
 }

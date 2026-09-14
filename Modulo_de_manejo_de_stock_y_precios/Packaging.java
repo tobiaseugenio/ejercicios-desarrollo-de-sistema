@@ -3,14 +3,13 @@ public class Packaging extends Aplicable {
 
     @Override
     public float calcularPrecioFinal() {
-        // TODO Auto-generated method stub
-        throw new UnsupportedOperationException("Unimplemented method 'calcularPrecioFinal'");
+        float precioProducto = super.producto.calcularPrecioFinal();        
+        return precioProducto + agregado;
     }
 
     @Override
     public int calcularStockDisponible() {
-        // TODO Auto-generated method stub
-        throw new UnsupportedOperationException("Unimplemented method 'calcularStockDisponible'");
+        return super.producto.calcularStockDisponible();    
     }
     
 }

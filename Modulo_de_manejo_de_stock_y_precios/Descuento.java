@@ -3,14 +3,14 @@ public class Descuento extends Aplicable {
 
     @Override
     public float calcularPrecioFinal() {
-        // TODO Auto-generated method stub
-        throw new UnsupportedOperationException("Unimplemented method 'calcularPrecioFinal'");
+        float precioProducto = super.producto.calcularPrecioFinal();        
+        float precioParaDescontar = (precioProducto * descuento) / 100;
+        return precioProducto - precioParaDescontar;
     }
 
     @Override
     public int calcularStockDisponible() {
-        // TODO Auto-generated method stub
-        throw new UnsupportedOperationException("Unimplemented method 'calcularStockDisponible'");
+        return super.producto.calcularStockDisponible();
     }
     
 }

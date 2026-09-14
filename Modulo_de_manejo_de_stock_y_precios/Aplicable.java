@@ -1,3 +1,4 @@
 public abstract class Aplicable extends Producto {
-    private Producto producto;   
+    protected Producto producto;
+        
 }
