@@ -10,4 +10,9 @@ public abstract class Producto {
     
     public abstract float calcularPrecioFinal();
     public abstract int calcularStockDisponible();
+
+    @Override
+    public String toString() {
+        return getNombre();
+    }
 }

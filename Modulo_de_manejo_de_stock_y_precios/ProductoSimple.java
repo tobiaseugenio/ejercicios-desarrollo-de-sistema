@@ -39,4 +39,9 @@ public class ProductoSimple extends Producto {
     public int calcularStockDisponible() {
         return this.stockDisponible;    
     }
+
+    @Override
+    public String toString() {
+        return getNombre() + " $" + getPrecioUnitario() + " #" + getStockDisponible();
+    }
 }

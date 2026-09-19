@@ -5,7 +5,7 @@ public class Combo extends Producto {
     private HashSet<Producto> productos;
     
 
-    public Combo(String nombre, HashSet<Producto> productos) {
+    public Combo(String nombre) {
         this.nombre = nombre;
         this.productos = new HashSet<>();
     }
@@ -23,7 +23,22 @@ public class Combo extends Producto {
         }
         return stockDisponible;    
     }
+
+    public void agregarProducto(Producto p){
+        productos.add(p);
+    }
+
+    public void borrarProducto(Producto p){
+        productos.remove(p);
+    }
      
+    public void mostrarProductos(){
+        System.out.println(getNombre());
+        for (Producto producto : productos) {
+            System.out.println(producto.toString() + " "); 
+        }
+    }
+
     public String getNombre() {
         return nombre;
     }
@@ -35,5 +50,10 @@ public class Combo extends Producto {
     }
     public void setProductos(HashSet<Producto> productos) {
         this.productos = productos;
+    }
+
+    @Override
+    public String toString() {
+        return productos.toString();
     }
 }
